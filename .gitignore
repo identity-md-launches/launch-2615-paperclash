@@ -1,0 +1,7 @@
+# Foundry build artifacts
+out/
+cache/
+broadcast/
+
+# Scratch space for local checks; never submitted
+test/scratch/
