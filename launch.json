@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "PaperclashToken",
+    "name": "Paperclash",
+    "symbol": "PAPER",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "5000000000000000000000",
+    "remainderTo": "0xee2aaa315cf7ed169f93148d30d24af9318dbb66"
+  },
+  "notes": "Paperclash (PAPER) is a plain fixed-supply ERC-20 built on OpenZeppelin ERC20 v5.4.0 (src/PaperclashToken.sol). Its constructor takes no arguments and mints the whole supply, 1,000,000,000 PAPER with 18 decimals (1000000000000000000000000000 minor units), once to msg.sender, which at launch is the IMD ProjectFactory. There is no owner, mint, pause, blacklist, freeze, burnFrom, tax, fee, reflection, transfer hook, proxy, delegatecall or selfdestruct; the supply can never grow and every transfer moves exactly the amount requested, so the factory's transfer to the MerkleDistributor, the single-sided seed through the Uniswap v4 PoolManager, the remainder to the requester, distributor claims and trades all arrive whole. No application contracts are deployed with it. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 at the launch policy's 1.25% fee with tick spacing 60; the deployer derives the opening price from economics.initialMarketCapWei (a 5,000 IMD market cap for the whole supply) and the supply, so pool.initialPrice is provenance only. Powered by imd."
+}
